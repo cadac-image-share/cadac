@@ -12,7 +12,7 @@ Irrespective of the commit here is the original work done by each member(github 
 
 Ankur Arora(ankursmooth) - Created the entire database layer(Model of MVC),helped in creation of schema,created database in IBM DB2,created the Java beans class responsible for interfacing with the database and the servlets.Also corrected the bugs in servlets classes.
 
-Chirag Agarwal(agarwalchirag81@gmail.com) and Chirag Garg(cenati0n) - Were majorly responsible for the servlet classes(Controller) which dealt with user sign-up,login,forgot password,image upload and main timeline.They were the first to figure out the working and interfacing of servlets and beans classes.
+Chirag Agarwal(agarwalchirag81[at]gmail.com) and Chirag Garg(cenati0n) - Were majorly responsible for the servlet classes(Controller) which dealt with user sign-up,login,forgot password,image upload and main timeline.They were the first to figure out the working and interfacing of servlets and beans classes.
 
 Akshat Tandon(droftware) - Responsible for creation of the database schema,conversion of ER model to relational model,normalization of the schema into BCNF form,creation of servlet classes of bucket(Image Like) and following other users.
 
