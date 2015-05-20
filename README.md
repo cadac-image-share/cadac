@@ -1,12 +1,14 @@
 # Cadac
-Cadac is an image sharing portal whose back end is built on Java using servlets.
-Cadac is based on MVC - 3 architecture.
-It is not built on any framework.
-Its front end is a theme obtained from -(..)
-You can have an overview of the entire portal in this video
-https://www.youtube.com/watch?v=tO25TERG-Cc&feature=youtu.be
+Cadac is an image sharing portal whose back end is built on Java using servlets and is based on MVC-3 architecture.<br>
 
-Irrespective of the commit here is the original work done by each member
+It is not built using any framework.<br>
+
+Its front end is a theme which can be obtained from -(http://tympanus.net/Blueprints/GridGallery/) <br>
+
+You can have an overview of the entire portal in this video<br>
+https://www.youtube.com/watch?v=tO25TERG-Cc&feature=youtu.be<br>
+
+Irrespective of the commit here is the original work done by each member<br>
 
 Ankur Arora(ankursmooth) - Created the entire database layer(Model of MVC),helped in creation of schema,created database in IBM DB2,created the Java beans class responsible for interfacing with the database and the servlets.Also corrected the bugs in servlets classes.
 
