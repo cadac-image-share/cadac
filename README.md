@@ -1,5 +1,10 @@
 # Cadac
-Cadac is an image sharing portal whose back end is built on Java using servlets and is based on MVC-3 architecture.<br>
+Cadac is a web-based database application system implemented in Model 2 (MVC) architecture using JSP, Java Servlets and DB2 as a backend. The system, similar to flickr and PhotoShelter, can be used by its clients to
+• create their own profile and see images via timeline and gallery.
+• upload and store images and follow other users.
+• enter and update the descriptive information (time, place, caption, owner, category, copyright) for images.
+• specify the access privileges for images to public, among followers, and friends.
+• search for photos with the given words through image information.
 
 It is not built using any framework.<br>
 
