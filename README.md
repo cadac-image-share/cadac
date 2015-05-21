@@ -1,4 +1,4 @@
-# Cadac
+ Cadac
 ==============
 Cadac is a web-based database application system implemented in Model 2 (MVC) architecture using JSP, Java Servlets and DB2 as a backend. The system, similar to flickr and PhotoShelter, can be used by its clients to<br>
 • create their own profile and see images via timeline and gallery.<br>
@@ -14,7 +14,7 @@ Its front end is a theme which can be obtained from -(http://tympanus.net/Bluepr
 You can have an overview of the entire portal in this video<br>
 https://www.youtube.com/watch?v=tO25TERG-Cc&feature=youtu.be<br>
 
-_Irrespective of the commit here is the original work done by each member(github username in bracket)_
+###### _Irrespective of the commit here is the original work done by each member(github username in bracket)_
 
 
 **Ankur Arora**(ankursmooth) - Created the entire database layer(Model of MVC),helped in creation of schema,created database in IBM DB2,created the Java beans class responsible for interfacing with the database and the servlets.Also corrected the bugs in servlets classes.
