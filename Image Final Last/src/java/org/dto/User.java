@@ -41,6 +41,7 @@ public class User extends Connecting implements Serializable {
 //            return false;
 //        }
 //        pstmt.close();
+// using The HASH MAP created in Connecting.java
             if(hs.containsKey(s))
                 return false;
             else
@@ -49,11 +50,7 @@ public class User extends Connecting implements Serializable {
     }
 	//for getting public details of create object of this class and then call retrieveUserdetails, u should use this function 
     //at time of forget password also, so that fpq ie security question can be accesed ad then call forget pass
-//	public void retrieveUserdetails(String username) throws SQLException{
-//            
-//		retrieveUserdetails(username);
-//		
-//	}
+
 
     public boolean getAuthorized() {
         return authorized;
@@ -387,7 +384,7 @@ public class User extends Connecting implements Serializable {
         this.fpq = fpq;
         pstmt.close();
     }
-
+// Fpa is secret question's answer ( forgot password answer)
     public void setFpa(String fpa) throws SQLException {
         //
         PreparedStatement pstmt = con.prepareStatement("UPDATE S.USER SET fpa=? WHERE USERNAME=?");
@@ -419,10 +416,11 @@ public class User extends Connecting implements Serializable {
         this.gender = gender;
         pstmt.close();
     }
-
+//Logging out and deleting files og that user
     public void Logout() {
         img.deldir("C:\\Users\\ankursmooth\\Documents\\Netbeans projects\\Image Final Last\\web\\searchresult\\");
-        img.deldir("C:\\Users\\ankursmooth\\Documents\\Netbeans projects\\Image Final Last\\web\\img\\");
+        img.deldir("C:\\Users\\ankursmooth\\Documents\\Netbeans projects\\Image Final Last\\web\\img\\")
+        //removed semi colon so that u change the paths in this java file according tou ur file structure
         authorized = false;
         img.deldir("C:\\Users\\ankursmooth\\Documents\\Netbeans projects\\Image Final Last\\web\\profilepic.jpg");
 
@@ -454,13 +452,13 @@ public class User extends Connecting implements Serializable {
         con = Connecting.connect();
 
         System.out.println("user k search m aur search m ander");
-        // one line to make connection here
+        
         img.deldir("C:\\Users\\ankursmooth\\Documents\\Netbeans projects\\Image Final Last\\web\\" + "searchresult\\");
         File file = new File("C:\\Users\\ankursmooth\\Documents\\Netbeans projects\\Image Final Last\\web\\" + "searchresult\\large\\");
         file.mkdirs();
         File file2 = new File("C:\\Users\\ankursmooth\\Documents\\Netbeans projects\\Image Final Last\\web\\" + "searchresult\\thumb\\");
         file2.mkdirs();
-//            PreparedStatement pstmt2 = con.prepareStatement("select imagedata ,id from (select imagedata,id from s.image where (iausername in (select frusername from s.follows where feusername= ?) and visible_to=1) or (visible_to=2 ) or ( iausername=? and visible_to=0) order by pulse) a, s.tags b where tag like '%"+squery+"%'  and tid=id");
+
         PreparedStatement pstmt2 = con.prepareStatement("select id , imagedata from s.image c , (select distinct(id) as sid from (select imagedata,id,caption from s.image where (iausername in (select frusername from s.follows where feusername= ?) and visible_to=1) or (visible_to=2 ) or ( iausername=? and visible_to=0) order by pulse) a, s.tags b where (tag like '%" + squery + "%' and tid=id) or caption like '%" + squery + "%' ) d where d.sid=c.id order by uptime desc");
         pstmt2.setString(1, username);
         pstmt2.setString(2, username);
@@ -493,7 +491,7 @@ public class User extends Connecting implements Serializable {
         return searchresultarethere;
 
     }
-
+// to change the password string to senseless string to be stored in database
     public String encrypt(String text, final String key)
     {
         String res = "";
@@ -509,16 +507,12 @@ public class User extends Connecting implements Serializable {
                 a=a%10;
                 res += (char) (a);
             }
-            
+            else
             res += (char) ((c + key.charAt(j) - 2 * 'A') % 26 + 'A');
             j = ++j % key.length();
         }
         System.out.println("after encrypton"+ res);
         return res;
     }
-//    public String encrypt(String text, final String key)
-//    {
-//        
-//        return text;
-//    }
+
 }
