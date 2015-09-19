@@ -1,5 +1,9 @@
  Cadac
 ==============
+how to use:
+This is a netbeans project.
+Other requirements are IBM DB2, and glassfish server.
+
 Cadac is a web-based database application system implemented in Model 2 (MVC) architecture using JSP, Java Servlets and DB2 as a backend. The system, similar to flickr and PhotoShelter, can be used by its clients to<br>
 • create their own profile and see images via timeline and gallery.<br>
 • upload and store images and follow other users.<br>
